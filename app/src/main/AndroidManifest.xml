@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/GTDify.Light">
+        android:theme="@style/Theme.GTDify">
 
         <activity android:name=".view.activities.SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">
