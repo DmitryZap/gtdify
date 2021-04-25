@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gtdify</string>
+    <string name="inbox">Входящие</string>
+    <string name="date_and_time">Дата и время</string>
+    <string name="task_title">Название</string>
+    <string name="task_description">Описание</string>
+</resources>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">gtdify</string>
+    <string name="inbox">Inbox</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="task_title">Task title</string>
+    <string name="task_description">Description</string>
 </resources>
