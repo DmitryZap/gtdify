@@ -5,33 +5,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
-import ru.techpark.gtdify.R;
-
-
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ProjectFragment extends Fragment {
-
-
-    ProjectFragmentAdapter adapter = new ProjectFragmentAdapter();
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+public class TrashBoxFragment extends ProjectFragment{
 
     @Nullable
     @Override
@@ -51,21 +33,8 @@ public class ProjectFragment extends Fragment {
 
             }
         });
+
         return view;
     }
 
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("numbers", adapter.data.size());
-    }
-
-
-public class ProjectFragment extends Fragment {
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.project_fragment, container, false);
-        return root;
-    }
 }
