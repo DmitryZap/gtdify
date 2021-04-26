@@ -11,16 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/GTDify.Light">
 
+<<<<<<< HEAD
         <activity android:name=".view.activities.SplashScreenActivity"
             android:theme="@style/SplashScreenTheme">
+=======
+        <activity
+            android:name=".view.activities.CardActivity"
+            android:theme="@style/GTDify.Light">
+>>>>>>> 7baabf1a2265dfd225adee2de8da88c4e0e81907
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+<<<<<<< HEAD
         </activity>
 
         <activity android:name=".view.activities.MainActivity">
+=======
+
+>>>>>>> 7baabf1a2265dfd225adee2de8da88c4e0e81907
         </activity>
     </application>
 
