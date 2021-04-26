@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/project_fragment_checkbox"
+        android:background="@color/white"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp">
+
+    </CheckBox>
+
+    <TextView
+        android:id="@+id/project_fragment_title"
+        android:background="@color/white"
+        android:layout_marginTop="1dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        tools:text="Hello worldf gdhgfhg ">
+
+    </TextView>
+
+
+</LinearLayout>
