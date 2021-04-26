@@ -25,7 +25,7 @@ public class TrashBoxFragment extends ProjectFragment{
         recyclerView.setItemViewCacheSize(100);
         Context applicationContext = recyclerView.getContext().getApplicationContext();
         recyclerView.setLayoutManager(new LinearLayoutManager(applicationContext));
-        recyclerView.setAdapter(adapter);
+//        recyclerView.setAdapter(adapter);
         FloatingActionButton fab = view.findViewById(R.id.floating_button);
 
         //нажатие на желтую кнопку

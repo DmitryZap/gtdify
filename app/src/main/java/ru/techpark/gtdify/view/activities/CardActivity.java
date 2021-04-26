@@ -72,7 +72,9 @@ public class CardActivity extends AppCompatActivity {
                 @Override
                 protected void onPostExecute(Void aVoid) {
                     super.onPostExecute(aVoid);
-                    onBackPressed();
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                     Toast.makeText(getApplicationContext(), "Карточка сохарнена", Toast.LENGTH_LONG).show();
                 }
             }

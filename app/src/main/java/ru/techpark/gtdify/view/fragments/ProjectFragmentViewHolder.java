@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import ru.techpark.gtdify.R;
+import ru.techpark.gtdify.model.models.Card;
 
 public class ProjectFragmentViewHolder extends RecyclerView.ViewHolder {
 
@@ -24,9 +25,9 @@ public class ProjectFragmentViewHolder extends RecyclerView.ViewHolder {
     }
 
     @SuppressLint("SetTextI18n")
-    public void bind(ProjectFragmentModel model){
-        title.setText(model.mTitle);
-        check.setChecked(model.mCheck);
+    public void bind(Card model){
+        title.setText(model.getName());
+        check.setChecked(model.getComplete());
         //нажатие на текст
         title.setOnClickListener(new View.OnClickListener() {
             @Override

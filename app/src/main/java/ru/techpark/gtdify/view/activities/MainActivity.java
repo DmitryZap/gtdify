@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, CardActivity.class);
             startActivity(intent);
+
+            finish();
         });
     }
 

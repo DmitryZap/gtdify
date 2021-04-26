@@ -25,7 +25,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class ProjectFragment extends Fragment {
 
 
-    ProjectFragmentAdapter adapter = new ProjectFragmentAdapter();
+//    ProjectFragmentAdapter adapter = new ProjectFragmentAdapter();
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class ProjectFragment extends Fragment {
         recyclerView.setItemViewCacheSize(100);
         Context applicationContext = recyclerView.getContext().getApplicationContext();
         recyclerView.setLayoutManager(new LinearLayoutManager(applicationContext));
-        recyclerView.setAdapter(adapter);
+//        recyclerView.setAdapter(adapter);
         FloatingActionButton fab = view.findViewById(R.id.floating_button);
 
         //нажатие на желтую кнопку
@@ -56,7 +56,7 @@ public class ProjectFragment extends Fragment {
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("numbers", adapter.data.size());
+//        outState.putInt("numbers", adapter.data.size());
     }
 
 
