@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ru.techpark.gtdify.R;
+
 public class ProjectFragmentAdapter extends RecyclerView.Adapter<ProjectFragmentViewHolder> {
 
     List<ProjectFragmentModel> data = ProjectFragmentDataSource.getInstance().getRemoteData();

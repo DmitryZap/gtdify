@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import ru.techpark.gtdify.R;
+
 public class InBoxFragment extends ProjectFragment {
 
     InBoxAdapter adapter = new InBoxAdapter();

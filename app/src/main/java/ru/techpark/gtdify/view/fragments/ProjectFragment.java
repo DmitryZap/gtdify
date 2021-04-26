@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import ru.techpark.gtdify.R;
 
 
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -61,11 +60,12 @@ public class ProjectFragment extends Fragment {
     }
 
 
-public class ProjectFragment extends Fragment {
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.project_fragment, container, false);
-        return root;
-    }
+//    public class ProjectFragment extends Fragment {
+//
+//        public View onCreateView(@NonNull LayoutInflater inflater,
+//                                 ViewGroup container, Bundle savedInstanceState) {
+//            View root = inflater.inflate(R.layout.project_fragment, container, false);
+//            return root;
+//        }
+//    }
 }

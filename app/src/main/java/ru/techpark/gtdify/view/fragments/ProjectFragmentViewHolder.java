@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import ru.techpark.gtdify.R;
+
 public class ProjectFragmentViewHolder extends RecyclerView.ViewHolder {
 
     private final TextView title;

@@ -20,36 +20,36 @@ public class Card {
     private Boolean isComplete = false;
     @ColumnInfo(name = "is_delete")
     private Boolean isDelete = false;
-    private List<Card> cards = new ArrayList<>();
-    private java.sql.Date date;
-    @ColumnInfo(name = "time_start")
-    private java.sql.Time timeStart;
-    @ColumnInfo(name = "time_end")
-    private java.sql.Time timeEnd;
+//    private java.sql.Date date;
+//    @ColumnInfo(name = "time_start")
+//    private java.sql.Time timeStart;
+//    @ColumnInfo(name = "time_end")
+//    private java.sql.Time timeEnd;
 
 
     public Card(String name, String unformattedText) {
         this.name = name;
         this.unformattedText = unformattedText;
+        this.isComplete = false;
+        this.isDelete = false;
     }
 
-    public Card(String name, String unformattedText, Boolean isComplete, Boolean isDelete, List<Card> cards, Date date, Time timeStart, Time timeEnd) {
-        this.name = name;
-        this.unformattedText = unformattedText;
-        this.isComplete = isComplete;
-        this.isDelete = isDelete;
-        this.cards = cards;
-        this.date = date;
-        this.timeStart = timeStart;
-        this.timeEnd = timeEnd;
+
+//    public List<Card> getCards() {
+//        return cards;
+//    }
+//
+//    public void setCards(List<Card> cards) {
+//        this.cards = cards;
+//    }
+
+
+    public Integer getId() {
+        return id;
     }
 
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -76,29 +76,29 @@ public class Card {
         isComplete = complete;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Time getTimeStart() {
-        return timeStart;
-    }
-
-    public void setTimeStart(Time timeStart) {
-        this.timeStart = timeStart;
-    }
-
-    public Time getTimeEnd() {
-        return timeEnd;
-    }
-
-    public void setTimeEnd(Time timeEnd) {
-        this.timeEnd = timeEnd;
-    }
+//    public Date getDate() {
+//        return date;
+//    }
+//
+//    public void setDate(Date date) {
+//        this.date = date;
+//    }
+//
+//    public Time getTimeStart() {
+//        return timeStart;
+//    }
+//
+//    public void setTimeStart(Time timeStart) {
+//        this.timeStart = timeStart;
+//    }
+//
+//    public Time getTimeEnd() {
+//        return timeEnd;
+//    }
+//
+//    public void setTimeEnd(Time timeEnd) {
+//        this.timeEnd = timeEnd;
+//    }
 
     public Boolean getDelete() {
         return isDelete;

@@ -1,9 +1,13 @@
 package ru.techpark.gtdify.view.activities;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +18,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.Calendar;
 
 import ru.techpark.gtdify.R;
+import ru.techpark.gtdify.model.database.DatabaseClient;
+import ru.techpark.gtdify.model.models.Card;
 
 public class CardActivity extends AppCompatActivity {
 
@@ -24,6 +30,7 @@ public class CardActivity extends AppCompatActivity {
 
         initToolbar();
         initSelectDialog();
+        initAddButton();
     }
 
     private void initToolbar() {
@@ -42,6 +49,36 @@ public class CardActivity extends AppCompatActivity {
             new DatePickerDialog(this, (DatePickerDialog.OnDateSetListener) (datePicker, i, i1, i2) -> {
 
             }, dateAndTime.get(Calendar.YEAR), dateAndTime.get(Calendar.MONTH), dateAndTime.get(Calendar.DAY_OF_MONTH)).show();
+        });
+    }
+
+    private void initAddButton() {
+        FloatingActionButton addButton = findViewById(R.id.addButton);
+        addButton.setOnClickListener(view -> {
+            EditText editTextCardName = findViewById(R.id.editTextCardName);
+            EditText editTextCardText = findViewById(R.id.editTextCardText);
+
+            class SaveTask extends AsyncTask<Void, Void, Void> {
+
+                @Override
+                protected Void doInBackground(Void... voids) {
+
+                    DatabaseClient.getInstance(getApplicationContext()).getAppDatabase()
+                            .cardDAO()
+                            .insert(new Card(editTextCardName.getText().toString(), editTextCardText.getText().toString()));
+                    return null;
+                }
+
+                @Override
+                protected void onPostExecute(Void aVoid) {
+                    super.onPostExecute(aVoid);
+                    onBackPressed();
+                    Toast.makeText(getApplicationContext(), "Карточка сохарнена", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            SaveTask st = new SaveTask();
+            st.execute();
         });
     }
 
