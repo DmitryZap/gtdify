@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/GTDify.Light">
+        android:theme="@style/Theme.GTDify">
 
         <activity android:name=".view.activities.MainActivity">
             <intent-filter>
@@ -19,9 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.activities.CardActivity"
-            android:theme="@style/GTDify.Light" />
+        <activity android:name=".view.activities.CardActivity" />
     </application>
 
 </manifest>
