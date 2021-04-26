@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SplashScreenTheme" parent="Theme.GTDify">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+    </style>
+
+    <style name="Theme.GTDify.ToolbarTheme" parent="Theme.GTDify">
+        <item name="fontFamily">@font/activist</item>
+        <item name="titleTextColor" tools:targetApi="l">?attr/colorOnPrimary</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+</resources>
