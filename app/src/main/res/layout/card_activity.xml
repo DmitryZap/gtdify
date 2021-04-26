@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_activity"
@@ -7,8 +7,12 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -24,18 +28,21 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
+        android:id="@+id/selectData"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp">
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
-            android:layout_marginStart="20dp"
-            android:src="@android:drawable/ic_menu_my_calendar">
-
-        </ImageView>
+            android:background="@drawable/checkbox_shape" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,42 +50,48 @@
             android:layout_gravity="center"
             android:layout_marginStart="20dp"
             android:text="@string/date_and_time"
-            android:textSize="20sp">
-
-        </TextView>
-
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
     </LinearLayout>
 
-    <AutoCompleteTextView
-        android:id="@+id/task_title"
-        android:layout_width="wrap_content"
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectData" />
+
+    <EditText
+        android:id="@+id/editTextCardName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/task_title"
-        android:textColor="@color/black"
-        android:textSize="30sp">
+        android:ems="10"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:inputType="textPersonName"
+        android:hint="Введите название"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    </AutoCompleteTextView>
 
-    <AutoCompleteTextView
-        android:id="@+id/task_description"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextCardText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="180dp"
-        android:text="@string/task_description"
-        android:textColor="@color/black">
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:inputType="textPersonName"
+        android:hint="Описание..."
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCardName" />
 
-    </AutoCompleteTextView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/accept_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/colorAccent" />
-
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

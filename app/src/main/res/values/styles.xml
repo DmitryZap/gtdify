@@ -8,5 +8,6 @@
         <item name="fontFamily">@font/activist</item>
         <item name="titleTextColor" tools:targetApi="l">?attr/colorOnPrimary</item>
         <item name="textAllCaps">true</item>
+        <item name="android:textColorPrimary">@color/white</item>
     </style>
 </resources>
